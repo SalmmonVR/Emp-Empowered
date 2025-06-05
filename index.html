@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Empowered | Gorilla Tag Comp Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     @keyframes backgroundMove {
       0% { background-position: 0% 50%; }
@@ -14,7 +15,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       color: white;
       background: linear-gradient(270deg, #001f3f, #0074D9, #7FDBFF);
       background-size: 600% 600%;
@@ -30,17 +31,23 @@
       width: 200px;
       height: auto;
       margin-bottom: 1rem;
+      filter: drop-shadow(0 0 15px #00bfff);
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
+      color: #7FDBFF;
+      text-shadow: 0 0 10px #7FDBFF, 0 0 20px #0074D9;
     }
 
     .motto {
       font-size: 1.2rem;
       font-style: italic;
       margin-bottom: 2rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px #00bfff;
     }
 
     .about-box {
@@ -50,8 +57,10 @@
       border-radius: 20px;
       max-width: 600px;
       margin: 1rem auto;
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.6;
+      color: #e0f7ff;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
     }
 
     .discord-btn {
@@ -63,12 +72,14 @@
       font-size: 1rem;
       border-radius: 10px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, box-shadow 0.3s;
       display: inline-block;
+      box-shadow: 0 0 10px #7289da;
     }
 
     .discord-btn:hover {
       background-color: #5b6eae;
+      box-shadow: 0 0 20px #5b6eae;
     }
 
     footer {
@@ -76,9 +87,37 @@
       font-size: 0.85rem;
       color: #ccc;
     }
-  </style>
+  
+#intro-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: #00bfff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 9999;
+  animation: fadeOut 3s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+</style>
 </head>
 <body>
+
+<div id="intro-overlay">
+  <div class="intro-text">EMPOWERED</div>
+</div>
+
   <div class="container">
     <img src="emp_logo.png" alt="EMP Logo" class="logo" />
     <h1>Empowered (EMP)</h1>
